@@ -247,7 +247,7 @@ class SentimentIntensityAnalyzer(object):
                     text_no_emoji += ' '
                 text_no_emoji += description
                 prev_space = False
-            else:
+            elif ord(chr) != 65039:
                 text_no_emoji += chr
                 prev_space = chr == ' '
         text = text_no_emoji.strip()
